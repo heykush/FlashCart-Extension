@@ -1,0 +1,247 @@
+
+body{
+    width: 372px;
+    height:460px;
+    font-family: sans-serif;
+    font-size: 12px;
+    background-color: whitesmoke;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+.nav{
+  margin-bottom: 5px;
+}
+.nav-pills>li{
+  width: 108px;
+  text-align: center;
+  font-size: 14px;
+}
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+  color: #fff;
+  background-color: #337ab7;
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+
+p {
+  margin: 0 0 4px;
+}
+
+
+
+span#version {
+
+    position: absolute;
+    left: 200px;
+    top: 30px;
+    font-size: 14px;
+    color: #5d5d5d;
+  }
+#upcoming>ul{
+  padding: 5px;
+  padding-right: 12px;
+  /*overflow: auto;
+  max-height: 400px;*/
+}
+
+#upcoming>ul>li{
+  margin: 15px 0 0 0;
+  display: inline-block;
+  background-color: white;
+  padding: 5px;
+  width: 100%;
+  box-shadow: 0px 0px 3px 1px #a2a2a2;
+}
+
+#upcoming>ul>li:hover {
+  position: relative;
+  top: 1px;
+  box-shadow: -1px -1px 5px 0px #525252;
+  left: 1px;
+}
+
+#upcoming>ul>li>a{
+  display: inline-flex;
+  color: black;
+  text-decoration: none;
+}
+
+#upcoming>ul>li>a>img{
+  height: 108px;
+}
+
+#upcoming>ul>li>a>div{
+margin: 0 24px;
+}
+
+#modelname {
+  font-size: 18px;
+  padding-top: 5px;
+}
+
+
+
+#settings>ul{
+  padding: 5px;
+  text-align: center;
+}
+
+#settings>ul>li{
+  margin: 15px 0 0 0;
+  display: inline-block;
+  background-color: white;
+  padding: 5px;
+  width: 100%;
+  box-shadow: 0px 0px 3px 1px #5696bb;
+}
+
+#settings>ul>li:hover {
+  position: relative;
+  top: 1px;
+  box-shadow: 0px 0px 5px 1px #008dc3;
+  left: 1px;
+}
+#settings>ul>li>hr{
+  margin: 0px;
+  border-top: 1px solid #008dc3;
+}
+
+#settings>ul>li>p{
+  font-size: 18px;
+  font-weight: 500;
+  color: #0059a7;
+}
+
+
+
+
+.radio {
+  font-size: 14px;
+  font-weight: 500;
+  display: inline-block;
+  text-transform: capitalize;
+  color: #5f5f5f;
+  vertical-align: middle;
+  user-select: none;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.radio + .radio{
+  margin-left: 28px;
+  margin-top: 10px;
+}
+
+.radio input[type="radio"]{
+  display: none;
+}
+
+.radio span{
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  border: 2px solid #0497ff;
+  display: block;
+  position: absolute;
+  left: -18px;
+  top: 3px;
+}
+
+
+.radio span:after{
+  content: "";
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background: #0497ff;
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 300ms ease-in-out 0s;
+}
+
+.radio input[type="radio"]:checked ~ span:after{
+  transform: translate(-50%, -50%) scale(1);
+}
+
+
+
+
+.checkbox {
+  font-size: 14px;
+  font-weight: 500;
+  display: inline-block;
+  text-transform: capitalize;
+  color: #5f5f5f;
+  vertical-align: middle;
+  user-select: none;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+
+.tab-content>.tab-pane {
+  overflow: auto;
+  max-height: 460px;
+}
+
+
+
+
+#netbank_options_div{
+  display: none;
+}
+#netbank_options{
+  padding: 4px;
+}
+#cod_advance_div{
+  display: none;
+}

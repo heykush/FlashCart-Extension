@@ -1,0 +1,67 @@
+#flashcart {
+    position: absolute;
+    padding: 5px;
+    border: 2px;
+    border-radius: 5px;
+    width: 76%;
+    background: rgb(40, 116, 240);
+    cursor: pointer;
+    text-align: center;
+    color: white;
+    font-weight: 500;
+    display: block;
+    bottom: 64px;
+    margin: 0 12% 0 12%;
+}
+
+#flashcart p{
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+#flashcart input[type=checkbox].toggle-switch {
+    font-size: 8px;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    width: 6em;
+    height: 3em;
+    border-radius: 3em;
+    background-color: #ddd;
+    outline: 0;
+    cursor: pointer;
+    transition: background-color 0.09s ease-in-out;
+    position: relative;
+    vertical-align: middle;
+    margin: 0px 0 2px 0px;
+    bottom: 0;
+}
+
+#flashcart input[type=checkbox].toggle-switch:checked {
+    background-color: #fb641b;
+}
+
+#flashcart input[type=checkbox].toggle-switch::after {
+    content: '';
+    width: 3em;
+    height: 3em;
+    background-color: white;
+    border-radius: 3em;
+    position: absolute;
+    transform: scale(0.7);
+    left: 0;
+    transition: left 0.09s ease-in-out;
+    box-shadow: 0 0.1em rgba(0, 0, 0, 0.5);
+}
+
+#flashcart input[type=checkbox].toggle-switch:checked::after {
+    left: 3em;
+}
+
+#status {
+    display: none;
+}
+#status>p {
+    font-size: 14px;
+    font-weight: 100;
+}

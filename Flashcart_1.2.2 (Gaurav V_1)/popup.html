@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.5.1.min.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-app.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-database.js"></script>
+
+    <script src="popup.js"></script>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>FlashCart - Adding product to cart at lightning fast speed.</title>
+
+</head>
+<body>
+
+
+
+  
+  <div class="container">
+    <h2> FlashCart ⚡ </h2> <span id='version'>(version: 1.2.2)</span>
+    <hr>
+    <ul class="nav nav-pills">
+      <li class="active"><a data-toggle="pill" href="#home">Change Log</a></li>
+      <li><a data-toggle="pill" href="#upcoming">Upcoming </a></li>
+      <li><a data-toggle="pill" href="#settings">Settings </a></li>
+    </ul>
+    
+    <div class="tab-content">
+
+      <div id="home" class="tab-pane fade in active">
+
+        <h4>❤ More Features Coming Soon </h4>
+        <br>
+
+        <h4>
+          How to use: <a target="_blank" href="https://www.youtube.com/channel/UCFaFPnm_bZoe03U1QJ_g1CQ/videos">Click here for tutorial</a>
+        </h4>
+        <br>
+
+        <p>Version 1.2.2</p>
+        <p>- Some Bug Fixes for Amazon Flash Sale.</p>
+        <p>- Speed improvement for Flipkart</p>
+
+        <br>
+        <p>Version 1.2.0</p>
+        <p>- Added support for Amazon Lightning Deals.</p>
+
+        <br>
+
+        <p>Version 1.1.6</p>
+        <p>- COD auto advance pay (Phonepe) option added.</p>
+
+        <br>
+        
+        <p>Version 1.1.5</p>
+        <p>- Sound on/off setting added.</p>
+        <p>- Netbanking option added.</p>
+        <p>- Purchase quantity options increased.</p>
+
+        <br>
+        <p>Version 1.1.4</p>
+        <p>- Realme page hang issue fixed now.</p>
+        <p>- Realme checkout sound added.</p>
+        <p>- Flipkart payment options hidden issue fixed.</p>
+        <p>- Auto focus/click on captcha input added.</p>
+        <p>- and some other bug fixes.</p>
+        <br><br>
+      </div>
+
+      <div id="upcoming" class="tab-pane fade">
+        
+        
+      </div>
+
+
+      <div id="settings" class="tab-pane fade">
+        <!-- <h2>👓Wait for next update...!! </h2> -->
+        <ul>
+          <li>
+            <p class="heading">Flipkart Auto Checkout</p>
+            <hr>
+            <div class="radio-group">
+              <label class="radio">
+
+                
+              <input type="radio" value="netbank" name="pmode">
+                NetBanking
+                <span></span>
+
+              </label>
+
+            <label class="radio">   
+              <input type="radio" value="phonepe" name="pmode">
+              PhonePe
+              <span></span>
+            </label>
+
+              <label class="radio">
+                <input type="radio" value="cod" name="pmode">
+                COD
+                <span></span>
+              </label>
+
+              <label class="radio">
+                <input type="radio" value="off" name="pmode" checked>
+                OFF
+                <span></span>
+              </label>
+
+
+              <div id="netbank_options_div">
+                <select id="netbank_options">
+                <option value="HDFC">HDFC Bank</option>
+                <option value="ICICI">ICICI Bank</option>
+                <option value="SBI">State Bank of India</option>
+                <option value="AXIS">Axis Bank</option>
+                <option value="KOTAK">Kotak Bank</option>
+                <option value="AIRTELMONEY">Airtel Payments Bank</option>
+                <option value="ALLAHABAD">Allahabad Bank</option>
+                <option value="ANDHRA">Andhra Bank</option>
+                <option value="AUSMALLFINBANK">AU Small Finance Bank</option>
+                <option value="BANDHAN">Bandhan Bank</option>
+                <option value="BASSIENCATHOLICCOOPB">Bassien Catholic Co-Operative Bank</option>
+                <option value="BNPPARIBAS">BNP Paribas</option>
+                <option value="BOBAHRAIN">Bank of Bahrain and Kuwait</option>
+                <option value="BOBARODA">Bank of Baroda</option>
+                <option value="BOBARODAC">Bank of Baroda Corporate</option>
+                <option value="BOBARODAR">Bank of Baroda Retail</option>
+                <option value="BOI">Bank of India</option>
+                <option value="BOM">Bank of Maharashtra</option>
+                <option value="CANARA">Canara Bank</option>
+                <option value="CATHOLICSYRIAN">Catholic Syrian Bank</option>
+                <option value="CBI">Central Bank</option>
+                <option value="CITYUNION">City Union Bank</option>
+                <option value="CORPORATION">Corporation Bank</option>
+                <option value="COSMOS">Cosmos Co-op Bank</option>
+                <option value="DBS">digibank by DBS</option>
+                <option value="DCB">DCB BANK LTD</option>
+                <option value="DENA">Dena Bank</option>
+                <option value="DEUTSCHE">Deutsche Bank</option>
+                <option value="DHANBANK">Dhanalakshmi Bank</option>
+                <option value="FEDERALBANK">Federal Bank</option>
+                <option value="IDBI">IDBI Bank</option>
+                <option value="IDFC">IDFC FIRST Bank</option>
+                <option value="INDIANBANK">Indian Bank</option>
+                <option value="INDUSIND">IndusInd Bank</option>
+                <option value="IOB">Indian Overseas Bank</option>
+                <option value="JANATABANKPUNE">JANATA SAHAKARI BANK LTD PUNE</option>
+                <option value="JKBANK">J&amp;K Bank</option>
+                <option value="KARNATAKA">Karnataka Bank</option>
+                <option value="KARURVYSYA">Karur Vysya Bank</option>
+                <option value="LAKSHMIVILAS">Lakshmi Vilas Bank - Retail</option>
+                <option value="LAKSHMIVILASC">Lakshmi Vilas Bank - Corporate</option>
+                <option value="OBC">Oriental Bank of Commerce</option>
+                <option value="PNB">Punjab National Bank</option>
+                <option value="PNBC">Punjab National Bank Corporate</option>
+                <option value="PNSB">Punjab &amp; Sind Bank</option>
+                <option value="PUNJABMAHA">Punjab &amp; Maharashtra Co-op Bank</option>
+                <option value="RATNAKAR">RBL Bank – Net Banking</option>
+                <option value="RBS">RBS</option>
+                <option value="SARASWAT">Saraswat Co-op Bank</option>
+                <option value="SHAMRAOVITHAL">Shamrao Vithal Co-op Bank</option>
+                <option value="SHIVAMERCOOP">Shivalik Mercantile Co-op Bank</option>
+                <option value="SOUTHINDIAN">The South Indian Bank</option>
+                <option value="STANC">Standard Chartered Bank</option>
+                <option value="SYNDICATE">Syndicate Bank</option>
+                <option value="TMBANK">Tamilnad Mercantile Bank Limited</option>
+                <option value="TNMERCANTILE">Tamil Nadu Merchantile Bank</option>
+                <option value="TNSC">TNSC Bank</option>
+                <option value="UCO">UCO Bank</option>
+                <option value="UNIONBANK">Union Bank of India</option>
+                <option value="UNITEDBANK">United Bank of India</option>
+                <option value="VIJAYABANK">Vijaya Bank</option>
+                <option value="YESBANK">Yes Bank</option>
+                <option value="ZOROACOPBANK">The Zoroastrian Co-Operative Bank</option>
+                </select>
+                <br><br>
+              </div>
+
+                <div id="cod_advance_div">
+                  <label class="checkbox">
+                    <input type="checkbox" id="cod_advance">
+                    COD Advance Pay
+                    <span></span>
+                  </label>
+                  
+                </div>
+             
+            </div>
+          </li>
+          <li>
+
+
+            <p class="heading">Default Quantity</p>
+            <hr>
+            <div class="radio-group">
+              <label class="radio">
+                <input type="radio" value="1" name="quantity" checked>
+                1
+                <span></span>
+              </label>
+
+              <label class="radio">
+                <input type="radio" value="2" name="quantity">
+                2
+                <span></span>
+              </label>
+
+              <label class="radio">
+                <input type="radio" value="3" name="quantity">
+                3
+                <span></span>
+              </label>
+
+              <label class="radio">
+                <input type="radio" value="4" name="quantity">
+                4
+                <span></span>
+              </label>
+
+            </div>
+          </li>
+
+            <li>
+            <p class="heading">Success Sound</p>
+            <hr>
+            <div class="radio-group">
+              <label class="radio">
+                <input type="radio" value="1" name="sound">
+                on
+                <span></span>
+              </label>
+
+              <label class="radio">
+                <input type="radio" value="0" name="sound">
+                off
+                <span></span>
+              </label>
+
+
+            </div>
+
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+  
+  </body>
+  </html>
+  

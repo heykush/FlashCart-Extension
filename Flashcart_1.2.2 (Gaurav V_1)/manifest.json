@@ -1,0 +1,65 @@
+{
+	"manifest_version": 2,
+	"name": "FlashCart",
+	"short_name": "FlashCart",
+	"version": "1.2.2",
+	"author": "Chetan Kaul",
+	"description": "A tool to help you in Flipkart, Amazon, Realme flash sales, when its hard to get it to the cart we help you just do that.",
+	"icons": {
+		"128": "icon128.png",
+		"48": "icon48.png",
+		"16": "icon16.png"
+		},
+	"browser_action": {
+		"default_icon": "icon16.png",
+		"default_popup": "popup.html",
+		"default_title": "Flashcart ⚡"
+		},
+	"content_scripts":[
+		{
+			"matches":["*://buy.realme.com/in/goods/*"],
+			"js":["jquery-2.0.1.min.js", "realme_layout.js", "realme_content.js"]
+		},
+		{
+			"matches":["*://api.realme.com/in/goods/*"],
+			"js":["jquery-2.0.1.min.js", "realme_api_layout.js", "realme_api_content.js"]
+		},
+		{
+			"matches":["*://buy.realme.com/in/paytm*"],
+			"js":["realme_sound.js"]
+		},
+		{
+			"matches":["*://*.flipkart.com/*/p/*"],
+			"js":[
+				"firebase-app.js",
+				"firebase-database.js",
+				"jquery-2.0.1.min.js",
+				"flipkart_layout.js",
+				"flipkart_content.js"
+			]
+		},
+		{
+			"matches":["*://*.flipkart.com/checkout/*error*"],
+			"js":["fk_redirect.js"]
+		},
+		{
+			"matches":["*://*.flipkart.com/checkout/*flash"],
+			"js":["jquery-2.0.1.min.js", "flipkart_checkout.js"]
+		},
+		{
+			"matches":["*://*.flipkart.com/payments?advance_payment*"],
+			"js":["jquery-2.0.1.min.js", "flipkart_advance.js"]
+		},
+		{
+			"matches":["*://*.amazon.in/*"],
+			"js":["jquery-2.0.1.min.js", "amazon_goldbox.js"],
+			"css":["amazon_goldbox_layout.css"]
+		}
+	],
+	"permissions": [
+		"storage"
+	],
+	
+	"content_security_policy": "script-src 'self' https://www.dropbox.com https://www.gstatic.com https://flashcart-7cf7b.firebaseio.com https://www.googletagmanager.com; object-src 'self'; connect-src 'self' wss://*.firebaseio.com;"
+
+}
