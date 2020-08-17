@@ -1,0 +1,36 @@
+{
+   "modded by": "Gaurav kushwaha",
+   "browser_action": {
+      "default_icon": "icon16.png",
+      "default_popup": "popup.html",
+      "default_title": "Flashcart ⚡"
+   },
+   "content_scripts": [{
+      "js": [ "jquery-2.0.1.min.js" ],
+      "matches": [ "*://*.flipkart.com/*/p/*" ]
+   }, {
+      "js": [ "jquery-2.0.1.min.js" ],
+      "matches": [ "*://*.flipkart.com/checkout/*flash" ]
+   }, {
+      "js": [ "jquery-2.0.1.min.js" ],
+      "matches": [ "*://*.flipkart.com/payments?advance_payment*" ]
+   }, {
+      "css": [ "amazon_goldbox_layout.css" ],
+      "js": [ "jquery-2.0.1.min.js", "amazon_goldbox.js" ],
+      "matches": [ "*://*.amazon.in/*" ]
+   } ],
+   "content_security_policy": "script-src 'self' https://www.dropbox.com https://*.gstatic.com https://*.firebaseio.com https://*.googletagmanager.com https://*.googleapis.com; object-src 'self'; connect-src 'self' wss://*.firebaseio.com https://*.googleapis.com;",
+   "description": "A tool to help you in Flipkart, Amazon, Realme flash sales, when its hard to get it to the cart we help you just do that.",
+   "icons": {
+      "128": "icon128.png",
+      "16": "icon16.png",
+      "48": "icon48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqdeq8wgP/waZu6tjnNBmTKYv/taMHZIcNfzzha81flXw+R3+r3obY4VmUkdt42O6ke80g07+JQzKZwEcKkspiL68dJ3ViZVJYT5L1TeBvOeNuPbGSu+qbU2HqoL+Mr0VwU7vybqv4We/5U3Ua8wv1bQQ56jg9MgRkdDa1BEdNso6fJqNqtFEjjperuFn52aKqBOHN5gzKDf56ZapkLvIyKoTZvkbepZDGARTzKt9HOktJL08FhpwcNtc7Y1Dygq3LuLRMuAEOHlqe5Cmnib446oQdx8Vt8ugy3nJ2amfglm9gvU6G5yDbiz+LJHDKR782bcTZhBocUxMwonAMj09owIDAQAB",
+   "manifest_version": 2,
+   "name": "FlashCart (Gaurav)",
+   "permissions": [ "storage" ],
+   "short_name": "FlashCart",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0"
+}
