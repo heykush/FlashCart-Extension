@@ -12,6 +12,6 @@ FlashCart  v1.0</br>
 
 ***Changelog:***
 1. New UI for Amazon
-2. New Colour design
-3. Fix Sound Effect
-4. No new window opened when phone add in your cart(*manually check in another Tab*)
+2. Added Telegram Group link
+3. Removed Sound effect for higher performance
+4. New window will open when phone add in your cart
