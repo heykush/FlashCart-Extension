@@ -8,7 +8,7 @@ FlashCart  v1.0</br>
 <h3 align="center"> I love to mod, so here some upgrade in stable version of flashcart
 </h3>
 
-## [New Update[Download]](https://github.com/heykush/FlashCart-Extension/tags)
+## [New Update](https://github.com/heykush/FlashCart-Extension/tags)
 
 ***Changelog:***
 1. New UI for Amazon
